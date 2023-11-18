@@ -12,7 +12,6 @@ while True:
 
   hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
   for (alt_deger, ust_deger) in sinirlar:
-    # create NumPy arrays from the boundaries
     alt_deger = np.array(alt_deger, dtype="uint8")
     ust_deger = np.array(ust_deger, dtype="uint8")
   mask = cv2.inRange(hsv, alt_deger, ust_deger)
